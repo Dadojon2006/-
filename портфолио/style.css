@@ -1,0 +1,340 @@
+
+/* Сброс стилей */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; 
+}
+
+/* Заголовок */
+header {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav li {
+    font-size: 1.2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Основной контент */
+main {
+    padding: 80px 20px 20px 20px;
+}
+
+/* Разделы */
+section {
+    margin-bottom: 40px;
+}
+
+/* Заголовки разделов */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Ссылки */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0062cc; 
+    text-decoration: underline;
+}
+
+/* ... другие стили ... */
+
+/* Раздел "О себе" */
+#about {
+    
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    margin-left: 20px;
+    text-align: center;
+}
+
+#about img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+#about h2 { /* Добавляем заголовок h2 */
+    margin-bottom: 10px;
+}
+
+#about p {
+    line-height: 1.8;
+    font-size: 1.1rem; /*  Увеличиваем размер шрифта */
+}
+
+/* ... другие стили ... */
+
+/* Раздел "Проекты" */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    margin-bottom: 5px;
+}
+
+/* Раздел "Навыки" */
+#skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    height: 100%;
+    width: 80%;
+    transition: width 0.5s ease;
+}
+
+.skill:hover .progress-bar {
+    width: 100%;
+}
+
+/* Раздел "Контакты" */
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#contact form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#contact form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+#contact form input, 
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#contact form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #0062cc; 
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    #projects, #skills {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        grid-template-columns: 1fr;
+    }
+}
+/* Добавьте этот стиль в ваш файл style.css */
+.animate {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1; 
+    transform: translateY(0); /* Снимаем начальный сдвиг */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Скрываем элементы по умолчанию */
+  section {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвигаем вниз */
+  }
+  
+  /* Добавляем стили для параллакса */
+  header {
+    background-image: url('path/to/your/background-image.jpg'); /* Замените на путь к вашему фоновому изображению */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+  }
+/* Стили для больших экранов */
+@media (min-width: 768px) {
+    #about {
+      grid-template-columns: 1fr 2fr; /* 1 колонка для изображения, 2 для текста */
+    }
+  
+    .project {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Изменяем ширину колонок */
+    }
+  }
+  
+  /* Стили для средних экранов */
+  @media (min-width: 480px) and (max-width: 767px) {
+    #about {
+      grid-template-columns: 1fr; /* 1 колонка для всего */
+      text-align: center; 
+    }
+  
+    .project {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Уменьшаем ширину колонок */
+    }
+  }
+  
+  /* Стили для малых экранов */
+  @media (max-width: 479px) {
+    #about {
+      grid-template-columns: 1fr; /* 1 колонка для всего */
+      text-align: center; 
+    }
+  
+    .project {
+      grid-template-columns: 1fr; /* 1 колонка для всего */
+    }
+  
+    .about-text {
+      margin-left: 0; /* Убираем отступ */
+    }
+  }
+  
+    
